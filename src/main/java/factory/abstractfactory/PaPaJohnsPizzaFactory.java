@@ -1,12 +1,15 @@
-package factory.abstractmethodfactory;
+package factory.abstractfactory;
 
+import factory.abstractmethodfactory.PapaJohnsBaconPizza;
+import factory.abstractmethodfactory.PapaJohnsCheesePizza;
+import factory.abstractmethodfactory.PapaJohnsSeafoodPizza;
 import factory.pizza.Pizza;
 
 /**
  * Created by zcg on 2017/4/27.
  */
-public class PaPaJohnsOrderPizzaMethodFactory extends MethodOrderPizza {
-    public Pizza create(String type) {
+public class PaPaJohnsPizzaFactory implements PizzaFactory {
+    public Pizza createPizza(String type) {
         if ("seafood".equals(type)) {
             return new PapaJohnsSeafoodPizza();
         } else if ("bacon".equals(type)) {

@@ -1,16 +1,20 @@
-package factory.abstractmethodfactory;
+package factory.abstractfactory;
 
 import factory.pizza.Pizza;
 
 /**
  * Created by zcg on 2017/4/27.
  */
-public abstract class MethodOrderPizza {
+public class AbsOrderPizza {
 
-    public abstract Pizza create(String type);
+    private PizzaFactory factory;
+
+    public void setFactory(PizzaFactory factory) {
+        this.factory = factory;
+    }
 
     public void order(String type) {
-        Pizza pizza = create(type);
+        Pizza pizza = factory.createPizza(type);
         if (pizza != null) {
             pizza.prepare();
             pizza.bake();

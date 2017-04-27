@@ -1,6 +1,5 @@
 package factory.abstractmethodfactory;
 
-import factory.pizza.BaconPizza;
 import factory.pizza.Pizza;
 
 /**
