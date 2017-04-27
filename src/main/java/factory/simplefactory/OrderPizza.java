@@ -1,5 +1,7 @@
 package factory.simplefactory;
 
+import factory.pizza.Pizza;
+
 /**
  * Created by zcg on 2017/4/27.
  */
